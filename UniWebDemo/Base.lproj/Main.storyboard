@@ -26,6 +26,9 @@
                                             <segment title="Usd"/>
                                             <segment title="Euro"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeCurrency:" destination="BYZ-38-t0r" eventType="valueChanged" id="zG4-Qa-FLb"/>
+                                        </connections>
                                     </segmentedControl>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jc1-cf-tDm" userLabel="Exchanger Segmented Control">
                                         <rect key="frame" x="0.0" y="50" width="374" height="32"/>
@@ -35,23 +38,58 @@
                                             <segment title="Coinbasepro"/>
                                             <segment title="Gemini"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeExchanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="Gvv-br-t1d"/>
+                                        </connections>
                                     </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="g7B-1W-azc">
+                                <rect key="frame" x="188.5" y="239" width="37" height="37"/>
+                                <color key="color" systemColor="linkColor"/>
+                            </activityIndicatorView>
+                            <stackView contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PK9-AX-aVP" userLabel="BTC Labels Stack View">
+                                <rect key="frame" x="80" y="436.5" width="284" height="23"/>
+                                <subviews>
+                                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC Rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKa-Zn-lwh" userLabel="BTC Title Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="284" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNU-Ve-Rb0" userLabel="BTC Rate Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="23"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PK9-AX-aVP" secondAttribute="trailing" constant="50" id="8gx-aD-nye"/>
+                            <constraint firstItem="PK9-AX-aVP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CEQ-1o-6N2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ire-Tf-XnO" secondAttribute="trailing" constant="20" id="VQF-0t-tb6"/>
                             <constraint firstItem="Ire-Tf-XnO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WBC-sR-Xqc"/>
+                            <constraint firstItem="g7B-1W-azc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="afd-yP-iUo"/>
+                            <constraint firstItem="PK9-AX-aVP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="bqd-hr-6lK"/>
+                            <constraint firstItem="g7B-1W-azc" firstAttribute="top" secondItem="Ire-Tf-XnO" secondAttribute="bottom" constant="50" id="mLa-EK-kZJ"/>
                             <constraint firstItem="Ire-Tf-XnO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uf7-Df-bWc"/>
                             <constraint firstItem="Ire-Tf-XnO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vTX-RC-V74"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AIM-2w-A9b"/>
                     <connections>
+                        <outlet property="btcRateLabel" destination="oNU-Ve-Rb0" id="a5K-ye-cSQ"/>
                         <outlet property="currencySegmentedControl" destination="RHI-zV-Vx8" id="gzU-Js-ceW"/>
                         <outlet property="exchangerSegmentedControl" destination="jc1-cf-tDm" id="WET-KZ-t6B"/>
+                        <outlet property="spinner" destination="g7B-1W-azc" id="97e-yI-LRr"/>
+                        <outletCollection property="labelsCollection" destination="mKa-Zn-lwh" collectionClass="NSMutableArray" id="sbD-FR-2xQ"/>
+                        <outletCollection property="labelsCollection" destination="oNU-Ve-Rb0" collectionClass="NSMutableArray" id="OM5-c0-XDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,6 +116,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

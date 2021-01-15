@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		B1324F2725B164CE00B97BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1324F2525B164CE00B97BFA /* LaunchScreen.storyboard */; };
 		B1324F3325B165F200B97BFA /* WebsocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F3225B165F200B97BFA /* WebsocketService.swift */; };
 		B1324F3625B171C300B97BFA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F3525B171C300B97BFA /* ViewModel.swift */; };
+		B1324F7025B1B4E300B97BFA /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F6F25B1B4E300B97BFA /* Rate.swift */; };
 		D39F7E58E1C9D053EB8B5C93 /* Pods_UniWebDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128E0253298614E4495AA2 /* Pods_UniWebDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		B1324F2825B164CE00B97BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1324F3225B165F200B97BFA /* WebsocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketService.swift; sourceTree = "<group>"; };
 		B1324F3525B171C300B97BFA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B1324F6F25B1B4E300B97BFA /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		DB128E0253298614E4495AA2 /* Pods_UniWebDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniWebDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E077F35439528F2EF5528424 /* Pods-UniWebDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniWebDemo.debug.xcconfig"; path = "Target Support Files/Pods-UniWebDemo/Pods-UniWebDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 		B1324F1925B164CC00B97BFA /* UniWebDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1324F6E25B1B4DA00B97BFA /* Model */,
 				B1324F3125B165DD00B97BFA /* Services */,
 				B1324F1A25B164CC00B97BFA /* AppDelegate.swift */,
 				B1324F1C25B164CC00B97BFA /* SceneDelegate.swift */,
@@ -96,13 +99,20 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B1324F6E25B1B4DA00B97BFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1324F6F25B1B4E300B97BFA /* Rate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F3C45C7B02C7AF84F890C6AE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				E077F35439528F2EF5528424 /* Pods-UniWebDemo.debug.xcconfig */,
 				67714B2145A5BE5F4A60B3A9 /* Pods-UniWebDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -223,6 +233,7 @@
 				B1324F3625B171C300B97BFA /* ViewModel.swift in Sources */,
 				B1324F1F25B164CC00B97BFA /* ViewController.swift in Sources */,
 				B1324F3325B165F200B97BFA /* WebsocketService.swift in Sources */,
+				B1324F7025B1B4E300B97BFA /* Rate.swift in Sources */,
 				B1324F1B25B164CC00B97BFA /* AppDelegate.swift in Sources */,
 				B1324F1D25B164CC00B97BFA /* SceneDelegate.swift in Sources */,
 			);

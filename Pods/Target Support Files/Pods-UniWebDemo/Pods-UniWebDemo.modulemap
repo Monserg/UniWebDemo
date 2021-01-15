@@ -1,0 +1,6 @@
+framework module Pods_UniWebDemo {
+  umbrella header "Pods-UniWebDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
