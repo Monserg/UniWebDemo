@@ -15,9 +15,11 @@
 		B1324F2725B164CE00B97BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1324F2525B164CE00B97BFA /* LaunchScreen.storyboard */; };
 		B1324F3325B165F200B97BFA /* WebsocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F3225B165F200B97BFA /* WebsocketService.swift */; };
 		B1324F3625B171C300B97BFA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F3525B171C300B97BFA /* ViewModel.swift */; };
+		D39F7E58E1C9D053EB8B5C93 /* Pods_UniWebDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB128E0253298614E4495AA2 /* Pods_UniWebDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67714B2145A5BE5F4A60B3A9 /* Pods-UniWebDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniWebDemo.release.xcconfig"; path = "Target Support Files/Pods-UniWebDemo/Pods-UniWebDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B1324F1725B164CC00B97BFA /* UniWebDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniWebDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1324F1A25B164CC00B97BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1324F1C25B164CC00B97BFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		B1324F2825B164CE00B97BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1324F3225B165F200B97BFA /* WebsocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketService.swift; sourceTree = "<group>"; };
 		B1324F3525B171C300B97BFA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DB128E0253298614E4495AA2 /* Pods_UniWebDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniWebDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E077F35439528F2EF5528424 /* Pods-UniWebDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniWebDemo.debug.xcconfig"; path = "Target Support Files/Pods-UniWebDemo/Pods-UniWebDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39F7E58E1C9D053EB8B5C93 /* Pods_UniWebDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42FDCB84BBDD0A3D4196C9CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB128E0253298614E4495AA2 /* Pods_UniWebDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B1324F0E25B164CC00B97BFA = {
 			isa = PBXGroup;
 			children = (
 				B1324F1925B164CC00B97BFA /* UniWebDemo */,
 				B1324F1825B164CC00B97BFA /* Products */,
+				F3C45C7B02C7AF84F890C6AE /* Pods */,
+				42FDCB84BBDD0A3D4196C9CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +96,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		F3C45C7B02C7AF84F890C6AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E077F35439528F2EF5528424 /* Pods-UniWebDemo.debug.xcconfig */,
+				67714B2145A5BE5F4A60B3A9 /* Pods-UniWebDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1324F2B25B164CE00B97BFA /* Build configuration list for PBXNativeTarget "UniWebDemo" */;
 			buildPhases = (
+				5DDF8F3BFA9A557452503D7C /* [CP] Check Pods Manifest.lock */,
 				B1324F1325B164CC00B97BFA /* Sources */,
 				B1324F1425B164CC00B97BFA /* Frameworks */,
 				B1324F1525B164CC00B97BFA /* Resources */,
+				1286993DE0C9175349F68F03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1286993DE0C9175349F68F03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniWebDemo/Pods-UniWebDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniWebDemo/Pods-UniWebDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniWebDemo/Pods-UniWebDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DDF8F3BFA9A557452503D7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniWebDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1324F1325B164CC00B97BFA /* Sources */ = {
@@ -299,6 +368,7 @@
 		};
 		B1324F2C25B164CE00B97BFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E077F35439528F2EF5528424 /* Pods-UniWebDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +388,7 @@
 		};
 		B1324F2D25B164CE00B97BFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67714B2145A5BE5F4A60B3A9 /* Pods-UniWebDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

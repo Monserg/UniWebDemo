@@ -7,8 +7,13 @@
 
 import Foundation
 
+enum CurrencyType: String {
+    case usd = "usd"
+    case euro = "eur"
+}
+
 protocol ViewModelType {
-    
+    func subscribe(currency: String, exchanger: String)
 }
 
 class ViewModel: ViewModelType {
@@ -19,5 +24,18 @@ class ViewModel: ViewModelType {
     // MARK: - Initialization
     init() {
         websocketService.connect()
+    }
+    
+    
+    // MARK: - ViewModelType protocol
+    func subscribe(currency: String = CurrencyType.usd.rawValue, exchanger: String) {
+        let stringRequest = "{\"subscribe\":\"trade.btc_\(currency)_\(exchanger)\"}"
+        let message = URLSessionWebSocketTask.Message.string(stringRequest)
+        websocketService.send(message: message)
+        receiveMessage()
+    }
+    
+    private func receiveMessage() {
+        websocketService.receiveMessage()
     }
 }
