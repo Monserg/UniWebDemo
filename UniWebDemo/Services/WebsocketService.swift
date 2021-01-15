@@ -10,10 +10,14 @@ import Foundation
 class WebsocketService: NSObject {
     // MARK: - Properties
     var isConnected = false
-    let webSocketTask = URLSession(configuration: .default).webSocketTask(with: URL(string: "ws://bitcoinstat.org:9000")!)
-    
+    var urlSession: URLSession!
+    var webSocketTask: URLSessionWebSocketTask!
+
+        
     // MARK: - Class functions
     func connect() {
+        urlSession = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        webSocketTask = urlSession.webSocketTask(with: URL(string: "ws://bitcoinstat.org:9000")!)
         webSocketTask.resume()
     }
 }
