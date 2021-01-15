@@ -13,6 +13,8 @@
 		B1324F2225B164CC00B97BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1324F2025B164CC00B97BFA /* Main.storyboard */; };
 		B1324F2425B164CE00B97BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1324F2325B164CE00B97BFA /* Assets.xcassets */; };
 		B1324F2725B164CE00B97BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1324F2525B164CE00B97BFA /* LaunchScreen.storyboard */; };
+		B1324F3325B165F200B97BFA /* WebsocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F3225B165F200B97BFA /* WebsocketService.swift */; };
+		B1324F3625B171C300B97BFA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1324F3525B171C300B97BFA /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B1324F2325B164CE00B97BFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1324F2625B164CE00B97BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1324F2825B164CE00B97BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1324F3225B165F200B97BFA /* WebsocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketService.swift; sourceTree = "<group>"; };
+		B1324F3525B171C300B97BFA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		B1324F1925B164CC00B97BFA /* UniWebDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1324F3125B165DD00B97BFA /* Services */,
 				B1324F1A25B164CC00B97BFA /* AppDelegate.swift */,
 				B1324F1C25B164CC00B97BFA /* SceneDelegate.swift */,
+				B1324F3525B171C300B97BFA /* ViewModel.swift */,
 				B1324F1E25B164CC00B97BFA /* ViewController.swift */,
 				B1324F2025B164CC00B97BFA /* Main.storyboard */,
 				B1324F2325B164CE00B97BFA /* Assets.xcassets */,
@@ -65,6 +71,14 @@
 				B1324F2825B164CE00B97BFA /* Info.plist */,
 			);
 			path = UniWebDemo;
+			sourceTree = "<group>";
+		};
+		B1324F3125B165DD00B97BFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B1324F3225B165F200B97BFA /* WebsocketService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1324F3625B171C300B97BFA /* ViewModel.swift in Sources */,
 				B1324F1F25B164CC00B97BFA /* ViewController.swift in Sources */,
+				B1324F3325B165F200B97BFA /* WebsocketService.swift in Sources */,
 				B1324F1B25B164CC00B97BFA /* AppDelegate.swift in Sources */,
 				B1324F1D25B164CC00B97BFA /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
